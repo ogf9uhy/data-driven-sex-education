@@ -26,13 +26,13 @@ funding<-c(34081000, 130000000, 93150000, 10700000, 66390000, 34393408)
 ed_type<-c('evidence-based','evidence-based','evidence-based', 'evidence-based',
            'abstinence-only', 'abstinence-only')
 program_funding<-data.frame(program, abbreviation, funding, ed_type)
-teen_birth_rates<-read.csv("/Users/oliviafountain/Desktop/STAT 3280/Final Project Files/CDC Health Data - Teen Birth Rate 2023-March 2024.csv", header=TRUE)
-aids_hiv_sti_rates2021<-read.csv("/Users/oliviafountain/Desktop/STAT 3280/Final Project Files/AIDS, HIV, and STI Rates 2021 - AIDS, HIV and STI Rates 2021.csv", header=TRUE)
-sex_ed_levels<-read.csv("/Users/oliviafountain/Desktop/STAT 3280/Final Project Files/Sex Education Level Data - Sex Education Level Data.csv", header=TRUE)
-general_requirements<-read.csv("/Users/oliviafountain/Desktop/STAT 3280/Final Project Files/General Requirements for Sex Ed.csv", header=TRUE)
-content_requirements<-read.csv("/Users/oliviafountain/Desktop/STAT 3280/Final Project Files/Content Requirements for Sex Ed - Content Requirements for Sex Ed.csv", header=TRUE)
-sex_ed_funding<-read.csv("/Users/oliviafountain/Desktop/STAT 3280/Final Project Files/Sex Ed Funding by State - 2022 Sex Ed Funding.csv", header=TRUE)
-hiv_sti_data<-read.csv("/Users/oliviafountain/Desktop/STAT 3280/Final Project Files/sti_hiv_data.csv")
+teen_birth_rates<-read.csv("CDC Health Data - Teen Birth Rate 2023-March 2024.csv", header=TRUE)
+aids_hiv_sti_rates2021<-read.csv("AIDS, HIV, and STI Rates 2021.csv", header=TRUE)
+sex_ed_levels<-read.csv("Sex Education Level Data.csv", header=TRUE)
+general_requirements<-read.csv("General Requirements for Sex Ed.csv", header=TRUE)
+content_requirements<-read.csv("Content Requirements for Sex Ed.csv", header=TRUE)
+sex_ed_funding<-read.csv("Sex Ed Funding by State 2022.csv", header=TRUE)
+hiv_sti_data<-read.csv("sti_hiv_data.csv", header=TRUE)
 hiv_sti_data$Indicator<-as.factor(hiv_sti_data$Indicator)
 
 general_requirements<-general_requirements%>%
@@ -122,7 +122,7 @@ funding_plot <- plot_ly(pie_data)%>%
   hole=0.3)%>%
   layout(title = list(text="Sex Education Federal Program Funding", y=0.9),
         images = list(
-      source = base64enc::dataURI(file = "/Users/oliviafountain/Desktop/STAT 3280/Final Project Files/Screen Shot 2024-04-23 at 9.40.57 AM.png"),
+      source = base64enc::dataURI(file = "legend.png"),
       x = 0.8, y = 0.8, 
       sizex = 0.3, sizey = 0.2,
       xref = "paper", yref = "paper", 
@@ -160,9 +160,9 @@ ggplot(abstinence_education_vs_funding, aes(x = state, y=abstinence_only)) +
 
 The most recent statistics on adolescent pregnancy rates from January 2023 to March 2024 can provide useful insight into how sex education laws may affect teen pregnancy. Given the following visualization tool, adolescent pregnancy rates are generally lower across the midwest, and tend to increase in the south and western regions of the US.  It is interesting that although four out of the top five states with the highest count of adolescent pregnancies require sex education, over half of the United States does not. This application allows for a more detailed overview of both the adolescent pregnancy rates and sex education requirements by state. When reviewing this data, one of the most discouraging findings can be found in the ‘Sex-Ed Requirements’ map, where over 30% of the United States does not even require sex education to be medically accurate. As a further clarification, the ‘Sex Education’ requirement type includes both evidence-based and abstinence-only programs. 
 
-shinyapp: https://ogf9uhy.shinyapps.io/AdolescentPregnancyRate/
-
-![](/Users/oliviafountain/Desktop/STAT 3280/Final Project Files/Screen Shot 2024-04-23 at 10.28.50 PM.png){ width=75% } ![](/Users/oliviafountain/Desktop/STAT 3280/Final Project Files/Screen Shot 2024-04-23 at 10.28.59 PM.png){ width=75% }
+```{r, echo=FALSE, out.extra="data-external=1"}
+knitr::include_app(url = "https://ogf9uhy.shinyapps.io/AdolescentPregnancyRate/", height="800px")
+```
 
 A much more serious discussion revolves around the impact of AIDs and STIs as a threat to public health, with state-by-state variations in infection rates.  This animated visualization compares state-by-state infection rates of HIV, AIDs classifications, Gonorrhea, and Chlamydia from 2021 by the amount of funding each state received for both evidence-based and abstinence-only education programs. In order to better scale the data, all axes have been log transformed, but the hover text provides more details into the exact amount of funding and diagnoses per state. Given these two visuals, it is apparent that states receiving larger amounts of funding for abstinence-only programs still have considerably high STI rates. It is important to note that these findings can also be influenced by population size and other demographic factors, but a core insight into these plots is that the trend of STI rates is still increasing, despite having  more funding and support for abstinence-only programs. 
 ```{r, warning=FALSE, echo=FALSE}
@@ -236,11 +236,9 @@ tree_map
 
 In the US, there is a great deal of variation in the context of sex education. While some states require complete, evidence-based programs, others place a higher priority on teaching focused solely on abstinence. Even states that do not require any abstinence-only coverage still stress some of the fundamental principles of that instruction, such as sex only occurring when married. To elaborate on this perspective, the following visualization tool shows the count of states that provide coverage or require certain curricula in sex education programs. Referring back to the earlier visualization tool for sex education requirements,  only 22 states require sex education, yet over 35 states either cover or stress abstinence-only instruction in their curriculum.  Abstinence-only programs usually omit information on contraception and safer sex practices, which can deprive adolescents of the knowledge and skills they need to make educated decisions about their sexual health.
 
-shinyapp: https://ogf9uhy.shinyapps.io/SexEdContentRequirements
-
-![](/Users/oliviafountain/Desktop/STAT 3280/Final Project Files/Screen Shot 2024-04-23 at 10.29.12 PM.png){ width=75% }
-![](/Users/oliviafountain/Desktop/STAT 3280/Final Project Files/Screen Shot 2024-04-23 at 10.29.20 PM.png){ width=75% }
-![](/Users/oliviafountain/Desktop/STAT 3280/Final Project Files/Screen Shot 2024-04-23 at 10.29.31 PM.png){ width=75% }
+```{r, echo=FALSE, out.extra="data-external=2"}
+knitr::include_app(url = "https://ogf9uhy.shinyapps.io/SexEdContentRequirements", height="800px")
+```
 
 To further the conversation about sex education exposure, the following visualization represents the findings from a series of qualitative interview surveys conducted by the Bedbible Research Center that has ranged from 1995 to 2023, and is still being continuously updated (Bedbible Research Center, 2022). The survey includes the percentage of respondent answers about their sex education exposure, aggregated by state. Since observing some differences between adolescent pregnancy rates and program requirements across groups of states, it may be of interest to compare these responses by region. Given this visual, it appears that midwestern states had the highest percentage of overall sex education exposure, while the southern and western regions had the lowest. This distinction could be of use in supporting more targeted interventions and tailored educational approaches to address gaps in sex education access and promote evidence-based education across all regions of the United States.
 ```{r, include=FALSE, warning=FALSE}
@@ -275,7 +273,7 @@ northeast<-sex_ed_levels%>%
 levels_by_region<-bind_rows(midwest, south, west, northeast)
 levels_by_region<-levels_by_region%>%
   mutate(regions=c("Midwest", "South", "West", "Northeast"))
-levels_by_region<-read.csv("/Users/oliviafountain/Desktop/STAT 3280/Final Project Files/median_responses_region.csv")
+levels_by_region<-read.csv("median_responses_region.csv")
 levels_by_region$level<-as.factor(levels_by_region$level)
 levels_by_region$region<-as.factor(levels_by_region$region)
 ```
@@ -298,14 +296,14 @@ According to the CDC, the 2020 Youth Risk Behavior Surveillance Survey estimated
 ## https://stackoverflow.com/questions/69133845/visualize-quantities-by-icons-using-r
 inclusive_education<-table(content_requirements$sexual_orientation)
 icon_plot_data<-tibble(state= rep("inclusive", 11) %>% c(rep("exclusive", 39)))
-waffle_data <- waffle_iron(icon_plot_data, aes_d(group = state), rows = 5) %>% mutate(label = ifelse(icon_plot_data$state == "inclusive", "/Users/oliviafountain/Desktop/STAT 3280/Final Project Files/rainbow.png", "/Users/oliviafountain/Desktop/STAT 3280/Final Project Files/grey_vector.png"))
+waffle_data <- waffle_iron(icon_plot_data, aes_d(group = state), rows = 5) %>% mutate(label = ifelse(icon_plot_data$state == "inclusive", "rainbow circle.png", "grey circle.png"))
 
 icon_array<-ggplot(waffle_data, aes(x, y)) + 
   geom_image(aes(image = label), size = 0.12) +  # Adjust size as needed
   coord_equal() + 
   theme_void() +  # Remove background and axis
   expand_limits(x = c(0, 4), y = c(0, 6)) +  # Adjust plot limits
-  labs(x = "", y = "", title = "Only 11 in 50 States Have Endorsed the Inclusion of Sexual Orientation Education") +
+  labs(x = "", y = "") +
     theme(plot.title = element_text(size = 10, hjust=0.5))
 icon_array
 ```

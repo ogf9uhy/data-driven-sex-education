@@ -1,0 +1,51 @@
+state,region,parents_support_sex_ed,have_received_sex_ed,in_elementary,in_secondary,in_postsecondary
+Alabama,South,80%,37%,89%,31%,52%
+Alaska,West,45%,44%,17%,18%,25%
+Arizona,West,60%,92%,12%,62%,35%
+Arkansas,South,56%,49%,13%,70%,39%
+California,West,39%,54%,48%,13%,76%
+Colorado,West,42%,66%,67%,25%,16%
+Connecticut,Northeast,40%,89%,29%,87%,53%
+Delaware,South,77%,31%,72%,41%,81%
+Florida,South,64%,30%,42%,55%,56%
+Georgia,South,53%,67%,10%,80%,69%
+Hawaii,West,67%,20%,66%,59%,82%
+Idaho,West,57%,28%,79%,83%,87%
+Illinois,Midwest,54%,56%,58%,85%,50%
+Indiana,Midwest,59%,42%,41%,67%,69%
+Iowa,Midwest,80%,76%,82%,85%,55%
+Kansas,Midwest,82%,32%,26%,56%,19%
+Kentucky,South,87%,38%,24%,30%,36%
+Louisiana,South,91%,55%,66%,50%,13%
+Maine,Northeast,77%,13%,89%,71%,78%
+Maryland,South,64%,7%,44%,38%,61%
+Massachusetts,Northeast,65%,34%,63%,16%,57%
+Michigan,Midwest,52%,79%,52%,91%,31%
+Minnesota,Midwest,48%,36%,31%,81%,28%
+Mississippi,South,84%,33%,82%,75%,26%
+Missouri,Midwest,88%,69%,51%,82%,83%
+Montana,West,39%,97%,37%,43%,21%
+Nebraska,Midwest,43%,24%,27%,84%,58%
+Nevada,West,56%,53%,49%,88%,29%
+New Hampshire,Northeast,62%,92%,60%,54%,35%
+New Jersey,Northeast,64%,10%,75%,79%,41%
+New Mexico,West,68%,12%,22%,19%,66%
+New York,Northeast,95%,22%,50%,72%,30%
+North Carolina,South,78%,15%,37%,51%,79%
+North Dakota,Midwest,72%,61%,51%,38%,73%
+Ohio,Midwest,78%,87%,30%,16%,60%
+Oklahoma,South,71%,21%,43%,91%,23%
+Oregon,West,68%,45%,64%,81%,89%
+Pennsylvania,Northeast,94%,22%,83%,74%,34%
+Rhode Island,Northeast,87%,63%,78%,82%,45%
+South Carolina,South,88%,80%,76%,43%,64%
+South Dakota,Midwest,69%,47%,84%,84%,35%
+Tennessee,South,52%,72%,87%,54%,79%
+Texas,South,35%,17%,19%,19%,30%
+Utah,West,46%,82%,80%,34%,34%
+Vermont,Northeast,52%,46%,25%,16%,45%
+Virginia,South,59%,90%,47%,37%,64%
+Washington,West,64%,83%,70%,22%,44%
+West Virginia,South,39%,48%,66%,40%,88%
+Wisconsin,Midwest,55%,52%,22%,32%,70%
+Wyoming,West,52%,56%,51%,77%,52%

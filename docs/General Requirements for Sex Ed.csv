@@ -1,0 +1,52 @@
+abbrev,state,sex_ed,hiv_ed,medically_accurate,opt_out_allowed
+AL,Alabama,,X,,X
+AK,Alaska,,,,X
+AZ,Arizona,,,HIV,HIV
+AR,Arkansas,,,,
+CA,California,X,X,X,X
+CO,Colorado,,,X,X
+CT,Connecticut,,X,,X
+DE,Delaware,X,X,,
+DC,District of Columbia,X,X,,X
+FL,Florida,X,X,,X
+GA,Georgia,X,X,,X
+HI,Hawaii,X,X,X,X
+ID,Idaho,,,,X
+IL,Illinois,,X,X,X
+IN,Indiana,,X,,X
+IA,Iowa,X,,X,X
+KS,Kansas,X,,,
+KY,Kentucky,X,X,,
+LA,Louisiana,,,X,X
+ME,Maine,X,X,X,X
+MD,Maryland,X,X,,X
+MA,Massachusetts,,,,X
+MI,Michigan,,X,,X
+MN,Minnesota,X,X,,
+MS,Mississippi,X,,,
+MO,Missouri,,X,X,X
+MT,Montana,X,X,,X
+NE,Nebraska,,,,
+NV,Nevada,X,X,,
+NH,New Hampshire,X,X,,X
+NJ,New Jersey,X,X,X,X
+NM,New Mexico,X,X,,X
+NY,New York,,X,,HIV
+NC,North Carolina,X,X,X,
+ND,North Dakota,X,X,,
+OH,Ohio,X,X,,X
+OK,Oklahoma,,X,HIV,X
+OR,Oregon,X,X,X,X
+PA,Pennsylvania,,X,,HIV
+RI,Rhode Island,X,X,X,HIV
+SC,South Carolina,X,X,,X
+SD,South Dakota,,,,
+TN,Tennessee,X,X,X,
+TX,Texas,,,,
+UT,Utah,X,X,X,
+VT,Vermont,X,X,,HIV
+VA,Virginia,,,X,X
+WA,Washington,X,X,X,X
+WV,West Virginia,X,X,,X
+WI,Wisconsin,,X,,X
+WY,Wyoming,,,,
