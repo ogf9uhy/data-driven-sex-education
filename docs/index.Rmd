@@ -160,6 +160,7 @@ ggplot(abstinence_education_vs_funding, aes(x = state, y=abstinence_only)) +
 
 The most recent statistics on adolescent pregnancy rates from January 2023 to March 2024 can provide useful insight into how sex education laws may affect teen pregnancy. Given the following visualization tool, adolescent pregnancy rates are generally lower across the midwest, and tend to increase in the south and western regions of the US.  It is interesting that although four out of the top five states with the highest count of adolescent pregnancies require sex education, over half of the United States does not. This application allows for a more detailed overview of both the adolescent pregnancy rates and sex education requirements by state. When reviewing this data, one of the most discouraging findings can be found in the ‘Sex-Ed Requirements’ map, where over 30% of the United States does not even require sex education to be medically accurate. As a further clarification, the ‘Sex Education’ requirement type includes both evidence-based and abstinence-only programs. 
 
+To visit this shinyApp's full webpage, click [here](https://ogf9uhy.shinyapps.io/SexEdContentRequirements).
 ```{r, echo=FALSE, out.extra="data-external=1"}
 knitr::include_app(url = "https://ogf9uhy.shinyapps.io/AdolescentPregnancyRate/", height="800px")
 ```
@@ -236,6 +237,7 @@ tree_map
 
 In the US, there is a great deal of variation in the context of sex education. While some states require complete, evidence-based programs, others place a higher priority on teaching focused solely on abstinence. Even states that do not require any abstinence-only coverage still stress some of the fundamental principles of that instruction, such as sex only occurring when married. To elaborate on this perspective, the following visualization tool shows the count of states that provide coverage or require certain curricula in sex education programs. Referring back to the earlier visualization tool for sex education requirements,  only 22 states require sex education, yet over 35 states either cover or stress abstinence-only instruction in their curriculum.  Abstinence-only programs usually omit information on contraception and safer sex practices, which can deprive adolescents of the knowledge and skills they need to make educated decisions about their sexual health.
 
+To visit this shinyApp's full webpage, click [here](https://ogf9uhy.shinyapps.io/SexEdContentRequirements).
 ```{r, echo=FALSE, out.extra="data-external=2"}
 knitr::include_app(url = "https://ogf9uhy.shinyapps.io/SexEdContentRequirements", height="800px")
 ```
@@ -296,7 +298,7 @@ According to the CDC, the 2020 Youth Risk Behavior Surveillance Survey estimated
 ## https://stackoverflow.com/questions/69133845/visualize-quantities-by-icons-using-r
 inclusive_education<-table(content_requirements$sexual_orientation)
 icon_plot_data<-tibble(state= rep("inclusive", 11) %>% c(rep("exclusive", 39)))
-waffle_data <- waffle_iron(icon_plot_data, aes_d(group = state), rows = 5) %>% mutate(label = ifelse(icon_plot_data$state == "inclusive", "rainbow circle.png", "grey circle.png"))
+waffle_data <- waffle_iron(icon_plot_data, aes_d(group = state), rows = 5) %>% mutate(label = ifelse(icon_plot_data$state == "inclusive", "rainbow.png", "grey circle.png"))
 
 icon_array<-ggplot(waffle_data, aes(x, y)) + 
   geom_image(aes(image = label), size = 0.12) +  # Adjust size as needed
